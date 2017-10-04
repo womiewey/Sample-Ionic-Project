@@ -7,8 +7,25 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+  <h2>Posts</h2>
+  <ion-list>
+      <ion-item>
+        <button ion-button (click)='load()'> Load </button>
+        <p> {{postList}} </p>
+      </ion-item>
+      <!-- <ion-item>
+        <button ion-button (click) = 'loop()'> Loop </button>
+        <p *ngFor = "let x of array">{{x}}</p>
+      </ion-item> -->
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text"name="name" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Message</ion-label>
+          <ion-input type="text" name="message"[(ngModel)]="message"></ion-input>
+      </ion-item>
+      <button ion-button (click) = 'loop()'> Signup </button>
+
+  </ion-list>
+  </ion-content>
